@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O3J-My-QzA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 3-->
+        <scene sceneID="QQh-XR-bhx">
+            <objects>
+                <viewController id="wJk-Pu-oAw" userLabel="Item 3" customClass="ProfileViewController" customModule="BluePic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4zx-78-hDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="REx-zO-IJd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85X-CK-LJJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-8i-sxZ">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wJk-Pu-oAw" id="HZq-gI-ATW"/>
+                                    <outlet property="delegate" destination="wJk-Pu-oAw" id="0Ut-Hr-5lT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="REx-zO-IJd" firstAttribute="top" secondItem="QMK-8i-sxZ" secondAttribute="bottom" id="2dX-tE-bnF"/>
+                            <constraint firstAttribute="trailing" secondItem="QMK-8i-sxZ" secondAttribute="trailing" id="GwW-em-SDe"/>
+                            <constraint firstItem="QMK-8i-sxZ" firstAttribute="leading" secondItem="85X-CK-LJJ" secondAttribute="leading" id="Kgg-bg-5QK"/>
+                            <constraint firstItem="QMK-8i-sxZ" firstAttribute="top" secondItem="4zx-78-hDa" secondAttribute="bottom" id="O1F-db-VFf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="evb-t9-o4L"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="QMK-8i-sxZ" id="ozA-cd-ZNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEo-GV-AQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="1432"/>
+        </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="tZO-VO-a13">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="O3J-My-QzA" customClass="ProfileNavigationController" customModule="BluePic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="Ran-21-Chf" userLabel="Item 3">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UF2-9y-uY1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wJk-Pu-oAw" kind="relationship" relationship="rootViewController" id="Tyd-sO-T8a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFn-hU-B2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="1432"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile" width="15" height="20"/>
+    </resources>
+</document>
